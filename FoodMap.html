@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>FoodMap</title>
+
+  
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Nunito:wght@400;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="FoodMap.css">
+</head>
+<body>
+
+<header>
+  <h1>🍽 FoodMap</h1>
+  <p>Готовь вкусно — шаг за шагом</p>
+</header>
+
+<section class="roadmap">
+
+  
+  <div class="step">
+    <div class="dot">1</div>
+    <div class="card">
+      <h2>Завтраки</h2>
+      <p>Начни день вкусно и легко</p>
+      <button onclick="openCategory('breakfast')">Выбрать</button>
+    </div>
+  </div>
+
+  
+  <div class="step right">
+    <div class="dot">2</div>
+    <div class="card">
+      <h2>Обеды</h2>
+      <p>Сытные и полезные блюда</p>
+      <button onclick="openCategory('lunch')">Выбрать</button>
+    </div>
+  </div>
+
+  
+  <div class="step">
+    <div class="dot">3</div>
+    <div class="card">
+      <h2>Полдники</h2>
+      <p>Перекусы и сладкое</p>
+      <button onclick="openCategory('snack')">Выбрать</button>
+    </div>
+  </div>
+
+  
+  <div class="step right">
+    <div class="dot">4</div>
+    <div class="card">
+      <h2>Ужины</h2>
+      <p>Лёгкие и уютные блюда</p>
+      <button onclick="openCategory('dinner')">Выбрать</button>
+    </div>
+  </div>
+
+</section>
+
+
+<div id="listModal" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('listModal')">×</span>
+    <h2 id="listTitle"></h2>
+    <div id="foodList" class="food-list"></div>
+  </div>
+</div>
+
+
+<div id="recipeModal" class="modal">
+  <div class="modal-content large">
+    <span class="close" onclick="closeModal('recipeModal')">×</span>
+    <h2 id="recipeTitle"></h2>
+    <p id="recipeDifficulty"></p>
+    <div id="recipeText"></div>
+  </div>
+</div>
+
+<script src="FoodMap.js"></script>
+</body>
+</html>

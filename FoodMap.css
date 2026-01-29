@@ -1,0 +1,221 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Nunito", sans-serif;
+  background: linear-gradient(135deg, #e6bfa3, #d6a87f);
+  color: #6b7a3a;
+}
+
+header {
+  text-align: center;
+  padding: 40px 20px 20px;
+}
+
+header h1 {
+  font-family: "Poppins", sans-serif;
+  font-size: 46px;
+  margin-bottom: 6px;
+  color: #556b2f;
+}
+
+header p {
+  opacity: 0.9;
+}
+
+/* ROADMAP */
+
+.roadmap {
+  max-width: 850px;
+  margin: 50px auto;
+  position: relative;
+  padding-bottom: 80px;
+}
+
+.roadmap::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  width: 5px;
+  background: #cfd8a6;
+  transform: translateX(-50%);
+  border-radius: 10px;
+}
+
+.step {
+  display: flex;
+  align-items: center;
+  margin: 55px 0;
+}
+
+.step.right {
+  flex-direction: row-reverse;
+}
+
+.dot {
+  width: 46px;
+  height: 46px;
+  background: #f87171;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-family: "Poppins", sans-serif;
+  z-index: 2;
+  box-shadow: 0 6px 16px rgba(248,113,113,0.4);
+}
+
+.card {
+  background: #fffaf3;
+  width: 250px;
+  padding: 22px 24px;
+  border-radius: 22px;
+  margin: 0 26px;
+  box-shadow: 0 14px 30px rgba(0,0,0,0.12);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.card:hover {
+  transform: translateY(-7px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.14);
+}
+
+.card h2 {
+  font-family: "Poppins", sans-serif;
+  margin: 0 0 6px;
+  color: #556b2f;
+}
+
+.card p {
+  margin: 0 0 14px;
+  font-size: 14px;
+  opacity: 0.9;
+}
+
+.card button {
+  background: #f87171;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 14px;
+  color: white;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.25s ease, transform 0.2s ease;
+}
+
+.card button:hover {
+  background: #ef4444;
+  transform: scale(1.05);
+}
+
+/* МОДАЛКИ */
+
+.modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.45);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+}
+
+.modal-content {
+  background: #fff4e6;
+  padding: 26px 30px;
+  border-radius: 24px;
+  width: 340px;
+  box-shadow: 0 20px 45px rgba(0,0,0,0.2);
+  animation: pop 0.3s ease;
+  color: #6b7a3a;
+}
+
+.modal-content.large {
+  width: 420px;
+}
+
+@keyframes pop {
+  from {
+    transform: scale(0.85);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.close {
+  float: right;
+  font-size: 24px;
+  cursor: pointer;
+  font-weight: bold;
+  color: #556b2f;
+}
+
+.food-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 15px;
+}
+
+.food-item {
+  background: #e8efc8;
+  padding: 12px 14px;
+  border-radius: 14px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: transform 0.2s ease, background 0.2s ease;
+  color: #556b2f;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.food-item:hover {
+  background: #dbe6b2;
+  transform: scale(1.03);
+}
+
+.badge {
+  font-size: 12px;
+  background: #f87171;
+  color: white;
+  padding: 4px 8px;
+  border-radius: 10px;
+}
+
+
+
+@media (max-width: 700px) {
+  header h1 {
+    font-size: 34px;
+  }
+
+  .roadmap::before {
+    left: 20px;
+  }
+
+  .step,
+  .step.right {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+
+  .dot {
+    margin: 0 12px 0 0;
+  }
+
+  .card {
+    width: 100%;
+    margin: 0;
+  }
+}
