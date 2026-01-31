@@ -5,8 +5,8 @@
 body {
   margin: 0;
   font-family: "Nunito", sans-serif;
-  background: linear-gradient(135deg, #f2d7c3, #e8c1a3); /* светло-пастельно-коричневый фон */
-  color: #6b7a3a; /* мягкий оливковый текст */
+  background: linear-gradient(135deg, #d9b99b, #c39b80); 
+  color: #6b7a3a; 
 }
 
 header {
@@ -25,7 +25,7 @@ header p {
   opacity: 0.9;
 }
 
-/* ROADMAP */
+
 
 .roadmap {
   max-width: 850px;
@@ -41,7 +41,7 @@ header p {
   top: 0;
   bottom: 0;
   width: 5px;
-  background: #cfd8a6; /* мягкая пастельно-оливковая линия */
+  background: #cfd8a6; 
   transform: translateX(-50%);
   border-radius: 10px;
 }
@@ -59,7 +59,7 @@ header p {
 .dot {
   width: 46px;
   height: 46px;
-  background: #f87171; /* пастельно-красный цвет кнопок */
+  background: #f87171;
   color: white;
   border-radius: 50%;
   display: flex;
@@ -99,7 +99,7 @@ header p {
 }
 
 .card button {
-  background: #f87171; /* пастельно-красный */
+  background: #f87171; 
   border: none;
   padding: 10px 16px;
   border-radius: 14px;
@@ -115,7 +115,7 @@ header p {
   transform: scale(1.05);
 }
 
-/* МОДАЛКИ */
+
 
 .modal {
   position: fixed;
@@ -221,6 +221,7 @@ header p {
 }
 
  
+
 
 
 
