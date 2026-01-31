@@ -5,8 +5,8 @@
 body {
   margin: 0;
   font-family: "Nunito", sans-serif;
-  background: linear-gradient(135deg, #e6bfa3, #d6a87f);
-  color: #6b7a3a;
+  background: linear-gradient(135deg, #f2d7c3, #e8c1a3); /* светло-пастельно-коричневый фон */
+  color: #6b7a3a; /* мягкий оливковый текст */
 }
 
 header {
@@ -41,7 +41,7 @@ header p {
   top: 0;
   bottom: 0;
   width: 5px;
-  background: #cfd8a6;
+  background: #cfd8a6; /* мягкая пастельно-оливковая линия */
   transform: translateX(-50%);
   border-radius: 10px;
 }
@@ -59,7 +59,7 @@ header p {
 .dot {
   width: 46px;
   height: 46px;
-  background: #f87171;
+  background: #f87171; /* пастельно-красный цвет кнопок */
   color: white;
   border-radius: 50%;
   display: flex;
@@ -99,7 +99,7 @@ header p {
 }
 
 .card button {
-  background: #f87171;
+  background: #f87171; /* пастельно-красный */
   border: none;
   padding: 10px 16px;
   border-radius: 14px;
@@ -157,7 +157,7 @@ header p {
   font-size: 24px;
   cursor: pointer;
   font-weight: bold;
-  color: #556b2f;
+  color: #556b3a;
 }
 
 .food-list {
@@ -174,7 +174,7 @@ header p {
   cursor: pointer;
   font-weight: 600;
   transition: transform 0.2s ease, background 0.2s ease;
-  color: #556b2f;
+  color: #556b3a;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -193,7 +193,7 @@ header p {
   border-radius: 10px;
 }
 
-
+/* МОБИЛЬНАЯ АДАПТАЦИЯ */
 
 @media (max-width: 700px) {
   header h1 {
@@ -219,3 +219,4 @@ header p {
     margin: 0;
   }
 }
+
