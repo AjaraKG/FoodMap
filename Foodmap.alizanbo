@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<title>Моя база данных</title>
+<style>
+body {
+    font-family: Arial;
+    background: #002b36;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+input {
+    padding: 10px;
+    font-size: 16px;
+}
+
+button {
+    padding: 10px;
+    font-size: 16px;
+    background: green;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background: darkgreen;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+</style>
+</head>
+<body>
+
+<h1>Моя мини база данных</h1>
+
+<input type="text" id="nameInput" placeholder="Введите имя">
+<button onclick="addName()">Добавить</button>
+
+<h2>Список:</h2>
+<ul id="list"></ul>
+
+<script>
+let names = JSON.parse(localStorage.getItem("names")) || [];
+
+function renderList() {
+    let list = document.getElementById("list");
+    list.innerHTML = "";
+    names.forEach((name, index) => {
+        list.innerHTML += <li>${index + 1}. ${name}</li>;
+    });
+}
+
+function addName() {
+    let input = document.getElementById("nameInput");
+    if (input.value.trim() !== "") {
+        names.push(input.value);
+        localStorage.setItem("names", JSON.stringify(names));
+        input.value = "";
+        renderList();
+    }
+}
+
+renderList();
+</script>
+
+</body>
+</html>
